@@ -1,0 +1,30 @@
+{
+    "ignorePatterns": ["node_modules/", "dist/"],
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "vue"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/vue3-essential",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "@vue/eslint-config-typescript",
+        "@vue/eslint-config-prettier/skip-formatting"
+    ],
+    "rules": {
+        "prettier/prettier": ["error"],
+        "linebreak-style": ["error", "unix"],
+        "semi": ["error", "always"],
+        "@typescript-eslint/no-unused-vars": ["off"],
+        "@typescript-eslint/no-explicit-any": ["off"]
+    },
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    }
+}

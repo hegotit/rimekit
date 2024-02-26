@@ -2,17 +2,27 @@
   "name": "rimekit",
   "description": "Rime Kit",
   "version": "0.1.0",
-  "homepage": "https://github.com/lotem/rimekit",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "homepage": "https://github.com/hegotit/rimekit",
   "author": {
-    "name": "lotem",
-    "email": "chen.sst@gmail.com"
+    "name": "hegotit",
+    "email": "hegotit18@outlook.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/lotem/rimekit.git"
+    "url": "git://github.com/hegotit/rimekit.git"
   },
   "bugs": {
-    "url": "https://github.com/lotem/rimekit/issues"
+    "url": "https://github.com/hegotit/rimekit/issues"
   },
   "licenses": [
     {
@@ -20,15 +30,45 @@
       "url": "https://github.com/lotem/rimekit/blob/master/LICENSE"
     }
   ],
-  "main": "index.html",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 20.10.0"
+  },
+  "dependencies": {
+    "diff": "^5.2.0",
+    "element-plus": "^2.6.1",
+    "html-entities": "^2.5.2",
+    "less": "^4.2.0",
+    "path": "^0.12.7",
+    "pinia": "^2.1.7",
+    "trie-search": "^2.0.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "winreg2": "^1.3.2",
+    "yaml": "^2.4.1"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.2.0",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-contrib-nodeunit": "~0.2.2"
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/diff": "^5.0.9",
+    "@types/node": "^20.11.27",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-vue": "^9.23.0",
+    "npm-run-all2": "^6.1.2",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.1.6",
+    "vue-tsc": "^2.0.6"
   },
   "keywords": []
 }
