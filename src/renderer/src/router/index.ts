@@ -1,0 +1,42 @@
+import { createRouter, createWebHashHistory } from 'vue-router';
+
+const router = createRouter({
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/home',
+      name: 'home',
+      alias: '/',
+      component: () => import('@renderer/views/HomeScreen.vue'),
+    },
+    {
+      path: '/sadebugger',
+      name: 'Spelling Algebra Debugger',
+      alias: '/debugger',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('@renderer/views/SpellingAlgebraDebugger.vue'),
+    },
+    {
+      path: '/plum',
+      name: 'The Plum',
+      alias: ['/Plum'],
+      component: () => import('@renderer/views/ThePlum.vue'),
+    },
+    {
+      path: '/credits',
+      name: 'Credits',
+      alias: ['/Credits'],
+      component: () => import('@renderer/views/TheCredits.vue'),
+    },
+    {
+      path: '/cseditor',
+      name: 'Color Scheme Editor',
+      alias: ['/editor'],
+      component: () => import('@renderer/views/ColorSchemeEditor.vue'),
+    },
+  ],
+});
+
+export default router;

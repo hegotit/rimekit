@@ -19,16 +19,16 @@
     "noEmit": true,
     "noImplicitAny": false,
     "allowJs": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "isolatedModules": false
   },
   "files": [],
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "*.d.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     },
     {
-      "path": "./tsconfig.app.json"
+      "path": "./tsconfig.web.json"
     }
   ],
   "types": ["vitest/globals"]

@@ -1,22 +1,25 @@
 # Logs
 logs
 *.log
+*.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+/node_modules*
 **/node_modules/
 package-lock.json
-/test/download/
-/sample/download/
+/src/renderer/src/test/download/
+/src/renderer/src/sample/download/
 /sample/*.yaml
 
 .DS_Store
+out
 dist
 dist-ssr
+out
 coverage
 *.local
 
