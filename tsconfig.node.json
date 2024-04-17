@@ -1,5 +1,5 @@
 {
-  "extends": ["@electron-toolkit/tsconfig/tsconfig.node.json"],
+  "extends": ["./tsconfig.json"],
   "include": [
     "electron.vite.config.*",
     "vitest.config.*",
@@ -15,7 +15,7 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "types": ["electron-vite/node", "vite/client"],
+    "types": ["node", "vite/client"],
     "isolatedModules": false
   }
 }

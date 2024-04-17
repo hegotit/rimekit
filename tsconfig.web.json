@@ -1,5 +1,5 @@
 {
-  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "extends": "./tsconfig.json",
   "include": [
     "src/renderer/src/*.d.ts",
     "src/renderer/src/**/*",
@@ -7,6 +7,7 @@
     "src/preload/*.d.ts"
   ],
   "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "composite": true,
     "baseUrl": ".",
     "isolatedModules": false,
