@@ -1,8 +1,8 @@
 <template>
   <div v-show="visible">
-    <form class="form-search" @submit.prevent="updateQuery" style="margin: 20px">
+    <form class="form-search" style="margin: 20px" @submit.prevent="updateQuery">
       <div :class="{ 'input-append control-group': true, error: error }">
-        <input type="text" class="span2 search-query" v-model.trim="value" @input="validate" />
+        <input v-model.trim="value" type="text" class="span2 search-query" @input="validate" />
         <button type="submit" class="btn" :disabled="!!error">查询</button>
       </div>
     </form>
